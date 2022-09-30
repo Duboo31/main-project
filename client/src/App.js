@@ -1,7 +1,18 @@
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./components/views/LandingPage/LandingPage";
+import LoginPage from "./components/views/LoginPage/LoginPage";
+import RegisterPage from "./components/views/RegisterPage/RegisterPage";
+
+const App = () => {
   return (
-    <div>클라 초기 설정</div>
-    );
+    <Router>
+    <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+    </Routes>
+  </Router>
+  );
 }
 
 export default App;
